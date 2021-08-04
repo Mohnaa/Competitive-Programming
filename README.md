@@ -1,2 +1,2 @@
 # Competitive-Programming
-My demo template and whatever questions I'll be solving 
+My demo template and whatever questions I'll be solving in Codeforces
