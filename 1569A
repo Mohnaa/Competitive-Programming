@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+signed main(){
+   lli t;cin>>t;
+   while(t--){
+     lli n;cin>>n;
+     string s;cin>>s;
+     if (n==1) cout<<"-1 -1\n";
+     else{
+      bool ok=true;
+      char ch = s[0];
+      rep(i,1,n){
+         if (i==0) continue;
+         else if (s[i]!=ch){
+            cout<<i<<" "<<i+1<<"\n";
+            ok=false;
+            break;
+         }
+      }
+      if (ok) cout<<"-1 -1\n";
+     }
+   }
+    return 0;
+}
