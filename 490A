@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+signed main(){
+  int n,a;cin>>n;
+  vector<int> v1,v2,v3;
+  for (int i=1;i<=n;i++){
+    cin>>a;
+    if (a==1){ v1.emplace_back(i);}
+    else if (a==2){ v2.emplace_back(i);}
+    else {v3.emplace_back(i);}}
+    int mini= min(min(v1.size(),v2.size()),v3.size());
+    cout<<mini<<"\n";
+    for (int i=0; i<mini;i++){
+      cout<<v1[i]<<" "<<v2[i]<<" "<<v3[i]<<"\n";
+    }
+    return 0;
+}
