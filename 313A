@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+signed main(){
+     //if the no is positive no then no need to delete 
+ 
+   lli n;cin>>n;
+   if (n>=0) cout<<n;
+   else{
+      int num = (n/10);
+      int num2 = (n/100)*10 + n%10 ;
+      cout<<max(num,num2);
+   }
+ 
+    return 0;
+}
