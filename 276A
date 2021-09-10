@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int n,k,f,t,maxi = -1000000000;
+int main(){
+  cin>>n>>k;
+  while(n--)
+  {
+    cin>>f>>t;
+    if (t<=k){
+      maxi =max(maxi, f);
+    }
+    else{
+      maxi = max(maxi, f- (t-k));
+    }
+  }
+  cout<<maxi<<"\n";
+  return 0;
+}
