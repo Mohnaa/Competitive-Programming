@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+signed main(){
+  int a,b,cnta=0,cntb=0,cnt=0;
+  cin>>a>>b;
+  for(int i=1;i<=6;i++){
+    int difa= abs(i-a);
+    int difb = abs(i-b);
+    if (difa == difb) cnt++;
+    else if (difa<difb) cnta++;
+    else cntb++;
+  }
+  cout<<cnta<<" "<<cnt<<" "<<cntb;
+  return 0;
+}
