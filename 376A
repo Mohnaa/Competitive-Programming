@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define pn  printf("\n")
+#define ff first
+#define ss second
+
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+    lli m,n,t,b,c,d,i,j,k,x,y,z,l,q,r;
+
+    lli cnt=0,ans=0;
+    string s,s1;
+    while(cin>>s)
+    {
+        ans=0;
+        l=s.size();
+        for (int i=0;i<l;i++) {if(s[i]=='^') m=i;}
+
+        for (int i=0;i<l;i++)
+        {
+            if(isdigit(s[i]) )
+            {
+                ans+=(s[i]-'0')*(i-m);
+            }
+        }
+        if(ans==0)
+            cout<<"balance",pn;
+        else if(ans>0)
+            cout<<"right",pn;
+        else
+            cout<<"left"<<endl;
+    }
+    return 0;
+}
