@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+//const int N = 2e5;
+
+//int pf[N];
+signed main(){
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  
+  lli a[200010];
+  lli n,m,num1=0,num2=0;
+  cin>>n>>m; // n = array size & m = queries
+  for(int i=1;i<=n;i++){
+    cin>>a[i];
+    if (a[i]==1) num1++;
+    else num2++;
+    //pf[i]=pf[i-1]+a[i];
+  }
+  while(m--){
+    lli l,r;
+    cin>>l>>r;
+    //int num =pf[r]-pf[l-1];
+    lli ans = 5;
+    //cout<<ans/2<<"\n";
+    cout<<num1<<" "<<num2<<"\n";
+    if (ans %2) cout<<"0\n";
+    else{
+      if (num1>=ans/2 && num2>=ans/2) cout<<"1\n";
+      else cout<<"0\n";
+    }
+  }
+  return 0;
+}
