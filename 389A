@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+#define nline "\n"
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+ 
+  int n,g,x;
+  cin>>n;
+  cin>>g;
+  for (int i=1;i<n;i++){
+    cin>>x;
+    g = __gcd(g,x);
+  }
+  cout<<g*n<<nline;
+  return 0;
+}
