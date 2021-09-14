@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+    lli y,k,n;
+    cin>>y>>k>>n;
+    // agar x<n hai to x>k and we know x+y<n
+    //to satisfy this , we have to subtract k(as x>k) to y(y%k)
+    lli x =k - y%k;
+    lli lul = n-y; // as x+y <n
+    if (x<=lul){
+      cout<<x<<" ";
+      x+=k;
+      while(x<=lul){
+        cout<<x<<" ";
+        x+=k;
+      }
+      cout<<"\n";
+    }
+    else
+    {
+        cout<<"-1\n";
+    }
+    return 0;
+}
