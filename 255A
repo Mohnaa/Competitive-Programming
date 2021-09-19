@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+#define nline "\n"
+#define pf cout
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+ 
+  lli n;cin>>n;
+  vlli vec;
+  for (int i=0;i<n;i++){
+    int x;cin>>x;
+    vec.emplace_back(x);
+  }
+  lli chest=0,biceps=0,back=0;
+  for (int i=0; i<n;i++){
+    if (i%3==0){
+      chest+=vec[i];
+    }
+    else if (i%3==1){
+      biceps+=vec[i];
+    }
+    else{
+      back+=vec[i];
+    }
+  }
+  if (chest>biceps && chest>back){
+    pf <<"chest"<<nline;
+  }
+  else if (chest<biceps && biceps>back)
+    pf<<"biceps"<<nline ;
+  else {
+    pf <<"back"<<nline;
+  }
+  return 0;
+}
