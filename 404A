@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+#define nline "\n"
+#define pf cout
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+ 
+  int n;cin>>n;
+  string str;
+  set<char>x,anything;
+  for (int i=0;i<n;i++)
+  {
+    cin>>str;
+    for(int j=0; j<n;j++){
+      if (i==j || i+j==n-1){
+        x.insert(str[j]);
+      }
+      else {
+        anything.insert(str[j]);
+      }
+    }
+  }
+  /*for(auto it:x){
+    pf<<it.begin()<<nline;}
+ 
+  for (auto iti:anything){
+       pf<<iti.begin()<<nline;
+  }*/
+  if (x.size()==1 && anything.size()==1 && *x.begin()!=*anything.begin()){ // significance of last condition is that ->
+  //as it is a set , it'll store only 1 count of each type ...so it should be begin() and no such significance of end()
+      pf<<"YES"<<nline;
+    }
+    else{
+      pf<<"NO"<<nline;
+    }
+  return 0;
+}
