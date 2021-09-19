@@ -1,0 +1,61 @@
+#include<bits/stdc++.h>
+#define lli long long int
+#define vi vector<int>
+#define vlli vector<lli>
+#define pii pair<int,int>
+#define vpi vector<pii>
+#define mp unordered_map<char,int>
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+#define nline "\n"
+ 
+#define MOD1 1000000007
+#define MOD2 1000000009
+using namespace std;
+int main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+ 
+  // int n;cin>>n;
+  // int l=0,r=0;
+  // bool flag=false;
+  // while(n!=0){
+  //   int x,y;cin>>x>>y;
+ 
+  //   if(n==1 && (x%2+y%2==1)){
+  //     cout<<-1<<nline;
+  //     return 0;
+  //   }
+  //   if(x%2+y%2==1){
+  //     flag=true;
+  //   }
+  //   l+=x;r+=y;
+  // }
+  // if (l%2==0 && r%2==0) cout<<0<<nline;
+  // if ((l%2==1 && r%2==1) && flag) cout<<1<<nline;
+  // else cout<<-1<<nline;
+ 
+  lli n,v;
+  cin>>n>>v;
+  vi ans;
+  rep(i,0,n){
+    bool flag=false;
+    int num1,num2;
+    cin>>num1;
+ 
+    rep(j,0,num1){
+      cin>>num2;
+      if (!flag && v > num2){
+        flag=true;
+        ans.emplace_back(i);
+      }
+    }
+  }
+  cout<<ans.size()<<nline;
+  rep(i,0,ans.size()){
+    cout<<ans[i]+1<<" ";
+  }
+  return 0;
+}
